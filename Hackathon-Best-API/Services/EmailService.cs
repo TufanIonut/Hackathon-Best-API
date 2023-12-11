@@ -12,7 +12,7 @@ namespace Hackathon_Best_API.Services
             try
             {
                 var message = new MimeMessage();
-                message.From.Add(new MailboxAddress(name: "LearnPulse", address: "ionuttufan04@gmail.com"));
+                message.From.Add(new MailboxAddress(name: "LearnPulse", address: "mail.email"));
                 message.To.Add(new MailboxAddress(name: "", address: to));
                 message.Subject = subject;
 
@@ -24,7 +24,7 @@ namespace Hackathon_Best_API.Services
                 using (var client = new SmtpClient())
                 {
                     client.Connect(host: "smtp.gmail.com", port: 465, useSsl: true);
-                    client.Authenticate(userName: "ionuttufan04@gmail.com", password: "jtey txmc srps atog");
+                    client.Authenticate(userName: "mail@mail.com", password: "password");
                     client.Send(message);
 
                     client.Disconnect(quit: true);
